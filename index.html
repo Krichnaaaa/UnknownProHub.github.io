@@ -1,7 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+  GNU nano 7.1                       index.html                       Modified
+t="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giveaway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+^G Help      ^O Write Out ^W Where Is  ^K Cut       ^T Execute   ^C Location
+^X Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line
+t="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giveaway</title>
     <style>
@@ -41,13 +62,92 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border-radius: 8px;
+            width: 60%; /* Could be more or less, depending on screen size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.5s ease; /* Add animation */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Close button style */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #333;
+
+	
+        }
+	.abc{
+	    display: flex;
+            justify-content: center;
+            align-items: center;
+	}
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Claim Your Giveaway!</h1>
-        <p>Click the button below to claim your prize.</p>
+        <h1>Claim Red Pocket Giveaway!</h1>
+        <p>Click the button below to see the gift code.</p>
         <button id="claimButton">Claim Now</button>
     </div>
+
+    <!-- Congratulations Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="abc">Binance Red Packet Giveaway</h2>
+            <p class="abc">1425/2000 Clamed!</p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal element
+        var modal = document.getElementById('myModal');
+
+        // Show the modal when the page loads
+        window.onload = function() {
+            modal.style.display = 'block';
+        };
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
